@@ -1,0 +1,37 @@
+title: Cleo
+tagline: your training partner
+description: >-
+  Cleo is an AI-powered sales training partner that helps businesses improve
+  sales education through training models, interactive simulations, intelligent
+  grading, and real-time AI voice interactions.
+
+baseurl: /buildathon-mar-26
+url: https://ebarronh.github.io
+
+author:
+  name: Cleo Team
+
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Cleo Team
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="container">
+    <header class="post__header">
+      <a href="{{ '/blog/' | relative_url }}" class="post__back">&larr; Back to Blog</a>
+      <h1>{{ page.title }}</h1>
+      <div class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% if page.author %}<span class="post__author">by {{ page.author }}</span>{% endif %}
+        {% assign words = content | number_of_words %}
+        {% assign minutes = words | divided_by: 200 %}
+        {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+        <span class="post__reading-time">{{ minutes }} min read</span>
+      </div>
+    </header>
+    {% if page.image %}
+    <div class="post__hero-image">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+    <div class="post__content prose">
+      {{ content }}
+    </div>
+    <nav class="post__nav">
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url | relative_url }}" class="post__nav-link post__nav-link--prev">
+          <span>&larr; Previous</span>
+          <strong>{{ page.previous.title }}</strong>
+        </a>
+      {% else %}
+        <div></div>
+      {% endif %}
+      {% if page.next.url %}
+        <a href="{{ page.next.url | relative_url }}" class="post__nav-link post__nav-link--next">
+          <span>Next &rarr;</span>
+          <strong>{{ page.next.title }}</strong>
+        </a>
+      {% else %}
+        <div></div>
+      {% endif %}
+    </nav>
+  </div>
+</article>

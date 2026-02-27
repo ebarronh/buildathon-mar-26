@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+    // Fallback image reveal for browsers without scroll-driven animations
+    if (!CSS.supports('animation-timeline', 'view()')) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); } });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.prose img').forEach(img => observer.observe(img));
+    }
+  </script>
+</body>
+</html>
