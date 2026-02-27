@@ -11,13 +11,13 @@ layout: default
     <div class="blog-grid{% if site.posts.size > 1 %} blog-grid--multi{% endif %}">
       {% for post in site.posts %}
       <article class="blog-card">
-        {% if post.image %}
         <a href="{{ post.url | relative_url }}" class="blog-card__image-link">
-          <div class="blog-card__image">
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          <div class="blog-card__image{% unless post.image %} blog-card__image--placeholder{% endunless %}">
+            {% if post.image %}
+              <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+            {% endif %}
           </div>
         </a>
-        {% endif %}
         <div class="blog-card__content">
           <time class="blog-card__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
           <h2 class="blog-card__title">

@@ -16,11 +16,11 @@ layout: default
         <span class="post__reading-time">{{ minutes }} min read</span>
       </div>
     </header>
-    {% if page.image %}
-    <div class="post__hero-image">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    <div class="post__hero-image{% unless page.image %} post__hero-image--placeholder{% endunless %}">
+      {% if page.image %}
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+      {% endif %}
     </div>
-    {% endif %}
     <div class="post__content prose">
       {{ content }}
     </div>

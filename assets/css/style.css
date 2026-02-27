@@ -807,6 +807,13 @@ ul { list-style: none; }
 }
 
 
+.blog-card__image--placeholder {
+  background:
+    radial-gradient(ellipse 80% 70% at 70% 20%, rgba(59, 130, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+    linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+}
+
 .blog-card__content {
   padding: 28px;
 }
@@ -888,6 +895,14 @@ ul { list-style: none; }
 .post__hero-image img {
   width: 100%;
   display: block;
+}
+
+.post__hero-image--placeholder {
+  aspect-ratio: 21 / 9;
+  background:
+    radial-gradient(ellipse 80% 70% at 70% 20%, rgba(59, 130, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+    linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
 }
 
 
