@@ -8,7 +8,7 @@ layout: default
       <h1>{{ page.title }}</h1>
       <p>Insights on AI, sales training, and building Cleo.</p>
     </header>
-    <div class="blog-grid">
+    <div class="blog-grid{% if site.posts.size > 1 %} blog-grid--multi{% endif %}">
       {% for post in site.posts %}
       <article class="blog-card">
         <a href="{{ post.url | relative_url }}" class="blog-card__image-link">
@@ -16,7 +16,7 @@ layout: default
             {% if post.image %}
               <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
             {% else %}
-              <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="blog-card__placeholder-icon">
+              <svg width="64" height="64" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="blog-card__placeholder-icon">
                 <path d="M10 16C10 12.686 12.686 10 16 10C17.5 10 18.87 10.56 19.93 11.48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                 <path d="M22 16C22 19.314 19.314 22 16 22C14.5 22 13.13 21.44 12.07 20.52" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
                 <circle cx="16" cy="16" r="2" fill="currentColor"/>
