@@ -64,12 +64,12 @@ This is the main image for a blog post. It appears:
 
 **Format:** JPG for photos, PNG for screenshots/graphics. Keep file size under 500KB — compress with [Squoosh](https://squoosh.app/) or similar.
 
-**Naming convention:** `week-N-cover.jpg` or descriptive kebab-case like `voice-pipeline-architecture.png`
+**Naming convention:** Match the post filename. If the post is `2026-02-26-week-1-finding-the-problem.md`, the hero image should be `week-1-finding-the-problem.jpg`. Content images for that post use the same prefix: `week-1-finding-the-problem-diagram.png`, `week-1-finding-the-problem-whiteboard.jpg`, etc.
 
 **Usage:** Set the `image` field in post front matter:
 
 ```yaml
-image: /assets/images/week-2-cover.jpg
+image: /assets/images/week-2-building-the-voice-pipeline.jpg
 ```
 
 If no `image` is set, the blog card and post page simply skip the image area — no broken placeholder.
