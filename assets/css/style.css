@@ -1148,6 +1148,57 @@ ul { list-style: none; }
   }
 }
 
+/* --- Tables --- */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.9375rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.prose thead {
+  border-bottom: 2px solid var(--color-border);
+}
+
+.prose th {
+  text-align: left;
+  padding: 10px 16px;
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.prose td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-slate-300);
+}
+
+.prose tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* --- Mermaid diagrams --- */
+.prose .mermaid,
+.prose pre.mermaid {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  margin: 2em 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.prose .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */

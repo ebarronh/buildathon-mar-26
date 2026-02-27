@@ -98,6 +98,55 @@ Here's how the voice pipeline connects to the grading system:
 The key insight was keeping latency under 500ms...
 ```
 
+---
+
+## Tables
+
+Standard Markdown tables are supported and styled automatically:
+
+```markdown
+| Metric | Before Cleo | After Cleo |
+|--------|-------------|------------|
+| Ramp time | 12 weeks | 4 weeks |
+| Win rate | 22% | 38% |
+| Rep confidence | Low | High |
+```
+
+---
+
+## Mermaid Diagrams
+
+Mermaid diagrams render automatically. Wrap your diagram in a `mermaid` code block:
+
+````markdown
+```mermaid
+flowchart LR
+    A[Upload Content] --> B[AI Processes]
+    B --> C[Scenarios Created]
+    C --> D[Rep Practices]
+    D --> E[Graded Feedback]
+    E --> D
+```
+````
+
+Other diagram types work too — sequence diagrams, state diagrams, etc:
+
+````markdown
+```mermaid
+sequenceDiagram
+    participant Rep
+    participant Cleo
+    participant Grader
+    Rep->>Cleo: Starts simulation
+    Cleo->>Rep: Plays buyer role
+    Rep->>Cleo: Handles objection
+    Cleo->>Grader: Sends transcript
+    Grader->>Rep: Returns scorecard
+```
+````
+
+---
+
 ### Image checklist
 
 - [ ] File is in `assets/images/`
