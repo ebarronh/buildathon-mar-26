@@ -28,6 +28,13 @@ We started keeping track of the signals we were hearing:
 
 The training infrastructure exists. What's missing is the bridge between knowing and doing.
 
+| What we heard | From whom | Frequency |
+|---------------|-----------|-----------|
+| "I learn more in one bad call than a week of training" | Sales reps | Nearly universal |
+| "I know who's struggling, but I can't coach everyone" | Managers | 8 out of 10 |
+| "We build great content — nobody retains it" | Enablement leads | Every company |
+| "The best reps just have more reps" | VP Sales | 3 conversations |
+
 ## The Moment It Clicked
 
 We were sitting in a coffee shop, replaying a recorded sales call from one of the teams we'd talked to. The rep had all the right product knowledge. She knew the methodology. But when the buyer threw an unexpected objection, she froze for just a beat too long — and the conversation never recovered.
@@ -43,6 +50,17 @@ We're calling it Cleo. Short, memorable, and it feels like a name you'd give to 
 Cleo will be an AI training partner. Not a chatbot that quizzes you on product features. A partner that runs realistic sales conversations, adapts to your skill level, and gives you the kind of honest feedback that makes you better.
 
 ## What's Next
+
+Here's the high-level architecture we're thinking about:
+
+```mermaid
+flowchart LR
+    A[Sales Content] --> B[Cleo AI]
+    B --> C[Training Scenarios]
+    C --> D[Rep Practices]
+    D --> E[Intelligent Grading]
+    E -->|Feedback Loop| D
+```
 
 Week two is about turning this insight into architecture. We know the problem. We know the shape of the solution. Now we need to figure out how to build it — starting with the voice pipeline that makes AI conversations feel natural.
 
