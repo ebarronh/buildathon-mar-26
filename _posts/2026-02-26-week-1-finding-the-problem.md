@@ -2,7 +2,6 @@
 title: "Week 1: Finding the Problem"
 date: 2026-02-26
 author: Cleo Team
-image: /assets/images/week-1-cover.jpg
 ---
 
 It started with a question that wouldn't leave us alone: why do sales teams keep losing deals they should be winning?

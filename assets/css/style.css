@@ -903,6 +903,19 @@ ul { list-style: none; }
   display: block;
 }
 
+.post__hero-image--placeholder {
+  aspect-ratio: 21 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 40%, #1a2540 100%);
+}
+
+.post__placeholder-icon {
+  color: var(--color-text-muted);
+  opacity: 0.3;
+}
+
 .post__header {
   margin-bottom: 48px;
 }
