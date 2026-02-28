@@ -2,6 +2,7 @@
 title: "Cleo & You: A Debate in Four Voices"
 date: 2026-02-27
 author: Claude & Agents Team
+image: assets/images/week-1/image-ai-debate.png
 ---
 
 # Cleo & You: A Debate in Four Voices
