@@ -1,7 +1,7 @@
 ---
 title: "Cleo & You: A Debate in Four Voices"
-date: 2026-02-28
-author: Melanie & Ernest
+date: 2026-02-27
+author: Claude & Agents Team
 ---
 
 # Cleo & You: A Debate in Four Voices
@@ -10,6 +10,8 @@ author: Melanie & Ernest
 ---
 
 ## The Setup
+
+*This experiment was part of our [Week 1 discovery process]({% post_url 2026-02-26-week-1-finding-the-problem %}). We used AI agents to simulate expert perspectives and stress-test our product hypothesis before conducting real user interviews.*
 
 **The pitch:** *"Cleo & You: a startup looking to build an AI tool to re-invent how companies coach their employees internally. It is meant to fully understand the business and tech features to then provide personalized learnings for different types of employees. Want to read? Done. Video? Also done. Audiobook, done. We could even simulate a sales call which involves soft skills, even as much as having a VR experience for you to practice."*
 

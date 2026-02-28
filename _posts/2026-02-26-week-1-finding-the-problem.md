@@ -20,7 +20,9 @@ The biggest takeaway we implemented was the hypothesis-driven discovery approach
 
 The most important thing we learned: the most critical question in product development is "Should we build this?" before "Can we build this?" Even though we've both lived this problem firsthand, we still had assumptions we hadn't made explicit. The assumption mapping exercise surfaced that the riskiest thing isn't whether we can build Cleo — it's whether sales teams will actually trust and consistently use an AI system for onboarding, rather than defaulting to asking a colleague.
 
-To pressure-test our thinking early, we also used AI agents to simulate expert perspectives during our research. We created four personas: Maya, a Principal Designer at Apple; Dimitri, a Staff Engineer at Tesla; Ricardo, a Buffett School investor; and Dr. Sarah, a PhD in Educational Psychology. Each agent challenged our assumptions from a different angle — design, technical feasibility, business viability, and learning science — helping us stress-test Cleo before talking to real humans.
+To pressure-test our thinking early, we also used AI agents to simulate expert perspectives during our research. We created four personas: Maya, a Principal Designer at Apple; Dmitri, a Staff Engineer at Tesla; Richard, a Buffett School investor; and Dr. Sarah, a PhD in Educational Psychology. Each agent challenged our assumptions from a different angle — design, technical feasibility, business viability, and learning science — helping us stress-test Cleo before talking to real humans.
+
+[Read the full debate → Cleo & You: A Debate in Four Voices]({% post_url 2026-02-28-cleo-debate-four-voices %})
 
 ![AI agents running in Claude]({{ "/assets/images/week-1/agents-claude.png" | relative_url }})
 
