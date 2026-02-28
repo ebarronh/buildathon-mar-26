@@ -1,7 +1,7 @@
 ---
 title: "Week 1: Cleo & You"
 date: 2026-02-27
-author: Melanie & Ernest
+author: Ernest & Melanie
 image: /assets/images/week-1-finding-the-problem.png
 ---
 

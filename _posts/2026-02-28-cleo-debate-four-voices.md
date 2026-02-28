@@ -1,7 +1,7 @@
 ---
 title: "Cleo & You: A Debate in Four Voices"
 date: 2026-02-27
-author: Claude & Agents Team
+author: Ernest & Melanie
 image: assets/images/week-1/image-ai-debate.png
 ---
 
