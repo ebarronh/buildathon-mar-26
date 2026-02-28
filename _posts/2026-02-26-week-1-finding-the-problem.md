@@ -22,6 +22,8 @@ The most important thing we learned: the most critical question in product devel
 
 To pressure-test our thinking early, we also used AI agents to simulate expert perspectives during our research. We created four personas: Maya, a Principal Designer at Apple; Dimitri, a Staff Engineer at Tesla; Ricardo, a Buffett School investor; and Dr. Sarah, a PhD in Educational Psychology. Each agent challenged our assumptions from a different angle — design, technical feasibility, business viability, and learning science — helping us stress-test Cleo before talking to real humans.
 
+![AI agents running in Claude]({{ "/assets/images/week-1/agents-claude.png" | relative_url }})
+
 ![Melanie working on Cleo at her laptop]({{ "/assets/images/week-1/latop-zed.png" | relative_url }})
 
 ---
