@@ -12,6 +12,16 @@ Week 1 Discovery Deliverable • ProductBC Build-a-Thon 2026
 
 ---
 
+## Week 1 Summary
+
+This week we attended Workshop 1 on Product Discovery and used the frameworks introduced to define our product idea, Cleo — an AI-powered onboarding and sales enablement assistant. We identified our core problem, defined our target user segments, crafted our initial hypothesis, built our first Opportunity Solution Tree, and mapped our key assumptions across desirability, viability, feasibility, and usability. We also developed an interview guide to kick off user research next week.
+
+The biggest takeaway we implemented was the hypothesis-driven discovery approach — specifically the structure "We believe [user segment] experiences [problem] when [context] because [underlying cause]." Instead of jumping to solutions, we forced ourselves to articulate the root cause before thinking about how to solve it. We also applied the Opportunity Solution Tree to connect our desired outcome to concrete opportunities and testable experiments.
+
+The most important thing we learned: the most critical question in product development is "Should we build this?" before "Can we build this?" Even though we've both lived this problem firsthand, we still had assumptions we hadn't made explicit. The assumption mapping exercise surfaced that the riskiest thing isn't whether we can build Cleo — it's whether sales teams will actually trust and consistently use an AI system for onboarding, rather than defaulting to asking a colleague.
+
+---
+
 ## 1. Problem Statement
 
 > *Sales and customer-facing teams at growing companies lose weeks of productivity during onboarding and product updates because institutional knowledge lives inside specific people and static documents — not in a system that is always available, interactive, and adaptable to how each person learns.*
