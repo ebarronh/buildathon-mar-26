@@ -24,8 +24,6 @@ To pressure-test our thinking early, we also used AI agents to simulate expert p
 
 ![AI agents running in Claude]({{ "/assets/images/week-1/agents-claude.png" | relative_url }})
 
-![Melanie working on Cleo at her laptop]({{ "/assets/images/week-1/latop-zed.png" | relative_url }})
-
 ---
 
 ## 1. Problem Statement
@@ -121,6 +119,8 @@ Sales and customer-facing team members reach full productivity and confidence in
 > **Why it's riskiest:** If teams don't trust Cleo's accuracy or feel it's impersonal, adoption will fail regardless of how well we build it. Trust is the prerequisite for everything else.
 >
 > **How we'll test it:** Conduct 8–10 story-based interviews with sales managers and recent new hires across 3+ industries. Ask about the last time they onboarded someone or were onboarded. Listen for pain around availability, consistency, and knowledge gaps.
+
+![Melanie working on Cleo at her laptop]({{ "/assets/images/week-1/latop-zed.png" | relative_url }})
 
 ---
 
