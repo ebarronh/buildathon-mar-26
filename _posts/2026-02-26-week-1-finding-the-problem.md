@@ -42,7 +42,7 @@ While the context differs, the root problem is identical: knowledge is locked in
 |---|---|---|
 | Named user segments, clear context (onboarding + product updates), and identified root cause. | If interviews show teams don't actually feel this pain, or if they have adequate solutions already, this hypothesis is wrong. | If wrong, the entire product direction changes — making this the most important assumption to test first. |
 
-![Laptop with finger](assets/images/week-1/laptop-finger.HEIC)
+![Image showing the landing website of Cleo & You](/assets/images/week-1/laptop-finger.png)
 ---
 
 ## 4. Opportunity Solution Tree
