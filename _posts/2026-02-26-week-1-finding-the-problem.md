@@ -20,6 +20,8 @@ The biggest takeaway we implemented was the hypothesis-driven discovery approach
 
 The most important thing we learned: the most critical question in product development is "Should we build this?" before "Can we build this?" Even though we've both lived this problem firsthand, we still had assumptions we hadn't made explicit. The assumption mapping exercise surfaced that the riskiest thing isn't whether we can build Cleo — it's whether sales teams will actually trust and consistently use an AI system for onboarding, rather than defaulting to asking a colleague.
 
+![Melanie working on Cleo at her laptop](/assets/images/week-1/latop-zed.png)
+
 ---
 
 ## 1. Problem Statement
@@ -53,6 +55,7 @@ While the context differs, the root problem is identical: knowledge is locked in
 | Named user segments, clear context (onboarding + product updates), and identified root cause. | If interviews show teams don't actually feel this pain, or if they have adequate solutions already, this hypothesis is wrong. | If wrong, the entire product direction changes — making this the most important assumption to test first. |
 
 ![Image showing the landing website of Cleo & You](/assets/images/week-1/laptop-finger.png)
+
 ---
 
 ## 4. Opportunity Solution Tree
