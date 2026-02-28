@@ -6,7 +6,6 @@ image: /assets/images/week-1-finding-the-problem.png
 ---
 
 # Cleo & You
-
 **Your AI Onboarding & Sales Enablement Assistant**
 Week 1 Discovery Deliverable • ProductBC Build-a-Thon 2026
 
