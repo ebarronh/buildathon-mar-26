@@ -32,15 +32,15 @@ Two rounds. No hedging. No vendor diplomacy.
 
 ```mermaid
 quadrantChart
-    title CRM Landscape: Complexity vs. Value Delivered to Sales Reps
-    x-axis Low Complexity --> High Complexity
-    y-axis Low Value to Reps --> High Value to Reps
+    title CRM Landscape - Complexity vs Value Delivered to Sales Reps
+    x-axis "Low Complexity" --> "High Complexity"
+    y-axis "Low Value to Reps" --> "High Value to Reps"
     quadrant-1 Powerful but Painful
-    quadrant-2 The Sweet Spot (Empty)
+    quadrant-2 Sweet Spot - Empty
     quadrant-3 Avoid
     quadrant-4 Simple but Incomplete
     Salesforce: [0.92, 0.55]
-    Dynamics 365: [0.88, 0.48]
+    Dynamics365: [0.88, 0.48]
     HubSpot: [0.65, 0.62]
     Zoho: [0.72, 0.38]
     Pipedrive: [0.30, 0.52]
@@ -89,9 +89,9 @@ I want to push back on both of you slightly. The pricing criticism is real, but 
 
 ```mermaid
 graph LR
-    A[Early Stage\n0-20 employees] -->|Start here| B[Attio / HubSpot Free]
+    A["Early Stage<br/>0-20 employees"] -->|Start here| B["Attio / HubSpot Free"]
     A -->|Also viable| C[Pipedrive]
-    B -->|Hit growth ceiling| D[HubSpot Pro / Salesforce]
+    B -->|Hit growth ceiling| D["HubSpot Pro / Salesforce"]
     C -->|Hit complexity ceiling| D
     D -->|Price shock / complexity| E["Churn / Re-evaluate"]
     E -->|Loop back| A
@@ -139,12 +139,12 @@ And Attio — the most interesting design case — got something right that the 
 
 ```mermaid
 graph TD
-    subgraph "The Simplicity Paradox"
-    A["Zoho\nLow price ≠ Low complexity\nLegacy UI, steep learning curve"]
-    B["Pipedrive\nSimple appearance ≠ Complete product\nMissing core features"]
-    C["Attio\nModern UX ≠ Easy to use\nBlank canvas overwhelm"]
+    subgraph Paradox["The Simplicity Paradox"]
+        A["Zoho<br/>Low price, not low complexity<br/>Legacy UI, steep learning curve"]
+        B["Pipedrive<br/>Simple appearance, incomplete product<br/>Missing core features"]
+        C["Attio<br/>Modern UX, still hard to use<br/>Blank canvas overwhelm"]
     end
-    A --> D["Nobody has solved:\nPowerful + Simple + Complete"]
+    A --> D["Nobody has solved:<br/>Powerful + Simple + Complete"]
     B --> D
     C --> D
     style D fill:#2ecc71,stroke:#27ae60,stroke-width:3px,color:#fff
@@ -175,14 +175,14 @@ All four panelists converged: **unequivocally yes.** And the gap is more specifi
 ```mermaid
 flowchart TD
     A[Sales Rep Opens App] --> B{What does the AI surface?}
-    B --> C["Meeting brief:\nWho is this person,\nlast interaction, open items"]
-    B --> D["Deal risk alert:\nNo contact in 12 days,\ncompetitor mentioned"]
-    B --> E["Next best action:\nFollow up on proposal\nsent 3 days ago"]
-    C --> F[Rep takes action\nwith context]
+    B --> C["Meeting brief:<br/>Who is this person,<br/>last interaction, open items"]
+    B --> D["Deal risk alert:<br/>No contact in 12 days,<br/>competitor mentioned"]
+    B --> E["Next best action:<br/>Follow up on proposal<br/>sent 3 days ago"]
+    C --> F["Rep takes action with context"]
     D --> F
     E --> F
-    F --> G["App auto-logs outcome\nfrom email/calendar sync"]
-    G --> H["Manager sees pipeline\nwithout rep doing data entry"]
+    F --> G["App auto-logs outcome<br/>from email and calendar sync"]
+    G --> H["Manager sees pipeline<br/>without rep doing data entry"]
     style H fill:#4CAF50,color:#fff
     style A fill:#2196F3,color:#fff
 ```
