@@ -297,7 +297,17 @@ The P0 components — Simulation Call Screen, Score Reveal, Hero Scenario Card, 
 
 ---
 
-## 6. What We Learned About AI-Assisted Design
+## 6. Behind the Scenes: The Workspace
+
+This is what the process actually looked like — Linear for tracking issues, the code editor with AI conversations shaping the UX spec in real time, and the project structure growing organically as artifacts were produced.
+
+![Our workspace during Week 2 — Linear issues, AI-assisted UX design conversations, and project structure]({{ "/assets/images/week-2/progress-week-2.png" | relative_url }})
+
+No Figma, no whiteboard — just structured prompts, iterative refinement, and a spec that wrote itself through conversation. The AI wasn't generating mockups in isolation; it was asking us questions about color, typography, layout density, and platform strategy, then synthesizing our answers into a coherent specification.
+
+---
+
+## 7. What We Learned About AI-Assisted Design
 
 This week was a real test of using AI as a design collaborator. Here's what worked and what we'd do differently:
 
@@ -315,7 +325,7 @@ This week was a real test of using AI as a design collaborator. Here's what work
 
 ---
 
-## 7. Next Steps — Week 3
+## 8. Next Steps — Week 3
 
 - **Build the interactive prototype** — Clickable flows for the core practice loop (home -> scenario -> call -> score -> share)
 - **User testing** — Put the prototype in front of 5-8 target users and test: Does the flow feel natural? Is "under 10 seconds to a voice" achievable in practice?
