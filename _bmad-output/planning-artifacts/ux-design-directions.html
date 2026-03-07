@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cleo & You — Design Direction Mockups</title>
+<style>
+  :root {
+    --emerald-50: #ECFDF5;
+    --emerald-100: #D1FAE5;
+    --emerald-200: #A7F3D0;
+    --emerald-300: #6EE7B7;
+    --emerald-400: #34D399;
+    --emerald-500: #10B981;
+    --emerald-600: #059669;
+    --emerald-700: #047857;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+    --gray-950: #030712;
+    --amber: #F59E0B;
+    --red: #EF4444;
+    --purple: #8B5CF6;
+    --blue: #3B82F6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+    background: var(--gray-950);
+    color: var(--gray-100);
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  .page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(3, 7, 18, 0.9);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--emerald-400);
+  }
+
+  .page-header .subtitle {
+    font-size: 13px;
+    color: var(--gray-500);
+  }
+
+  .nav-tabs {
+    display: flex;
+    gap: 4px;
+  }
+
+  .nav-tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    color: var(--gray-400);
+    border: none;
+  }
+
+  .nav-tab:hover { background: rgba(255,255,255,0.06); color: var(--gray-200); }
+  .nav-tab.active { background: var(--emerald-600); color: white; }
+
+  /* Content */
+  .content { padding-top: 80px; }
+
+  .direction-section {
+    display: none;
+    padding: 40px 32px;
+    min-height: 100vh;
+  }
+
+  .direction-section.active { display: block; }
+
+  .direction-header {
+    margin-bottom: 40px;
+    max-width: 800px;
+  }
+
+  .direction-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .direction-header p {
+    font-size: 16px;
+    color: var(--gray-400);
+    line-height: 1.6;
+  }
+
+  .direction-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 16px;
+  }
+
+  /* Phone mockup */
+  .mockup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    max-width: 1400px;
+  }
+
+  .mockup-card {
+    background: var(--gray-900);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .mockup-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+
+  .mockup-label {
+    padding: 16px 20px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .phone-frame {
+    width: 280px;
+    height: 560px;
+    margin: 0 auto 20px;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--gray-700);
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ===== DIRECTION 1: Minimal Zen ===== */
+  .d1-home {
+    background: var(--gray-50);
+    padding: 48px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d1-greeting {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+  }
+
+  .d1-subtitle {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin-bottom: 32px;
+  }
+
+  .d1-readiness {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .d1-readiness-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .d1-score-ring {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px solid var(--emerald-200);
+    border-top-color: var(--emerald-500);
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .d1-score-ring::after {
+    content: '72%';
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-900);
+  }
+
+  .d1-practice-btn {
+    background: var(--emerald-500);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 18px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 16px;
+    transition: background 0.2s;
+  }
+
+  .d1-practice-btn:hover { background: var(--emerald-600); }
+
+  .d1-scenario-card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .d1-scenario-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--emerald-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .d1-scenario-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+
+  .d1-scenario-info p {
+    font-size: 12px;
+    color: var(--gray-500);
+  }
+
+  .d1-scenario-status {
+    margin-left: auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ===== DIRECTION 1: Call Screen ===== */
+  .d1-call {
+    background: var(--gray-950);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+  }
+
+  .d1-call-pulse {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 3s ease-in-out infinite;
+    margin-bottom: 24px;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+  }
+
+  .d1-call-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--emerald-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    font-weight: 700;
+  }
+
+  .d1-call-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .d1-call-role {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-bottom: 8px;
+  }
+
+  .d1-call-timer {
+    font-size: 14px;
+    color: var(--emerald-400);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 48px;
+  }
+
+  .d1-call-controls {
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    bottom: 48px;
+  }
+
+  .d1-call-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s;
+  }
+
+  .d1-call-btn:hover { transform: scale(1.1); }
+  .d1-call-btn.mute { background: var(--gray-800); color: var(--gray-300); }
+  .d1-call-btn.hint { background: var(--gray-800); color: var(--amber); }
+  .d1-call-btn.end { background: var(--red); color: white; }
+
+  /* ===== DIRECTION 1: Score ===== */
+  .d1-score {
+    background: var(--gray-950);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .d1-score-big {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 8px solid var(--emerald-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    animation: scoreReveal 0.8s ease-out;
+  }
+
+  @keyframes scoreReveal {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .d1-score-big span {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--emerald-400);
+  }
+
+  .d1-score-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .d1-score-desc {
+    font-size: 13px;
+    color: var(--gray-500);
+    margin-bottom: 32px;
+  }
+
+  .d1-score-items {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .d1-score-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 13px;
+  }
+
+  .d1-score-item span:first-child { color: var(--gray-400); }
+  .d1-score-item span:last-child { color: white; font-weight: 600; }
+
+  .d1-share-btn {
+    margin-top: 24px;
+    background: var(--emerald-500);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .d1-share-btn:hover { background: var(--emerald-600); transform: scale(1.02); }
+
+  /* ===== DIRECTION 2: Bold Cards ===== */
+  .d2-home {
+    background: white;
+    padding: 48px 16px 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d2-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .d2-logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--emerald-600);
+    letter-spacing: -0.5px;
+  }
+
+  .d2-avatar-small {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--emerald-100);
+  }
+
+  .d2-hero-card {
+    background: linear-gradient(135deg, var(--emerald-600), var(--emerald-700));
+    border-radius: 24px;
+    padding: 24px;
+    color: white;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .d2-hero-card::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .d2-hero-label {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .d2-hero-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .d2-hero-subtitle {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 16px;
+  }
+
+  .d2-hero-btn {
+    background: white;
+    color: var(--emerald-700);
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .d2-section-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-500);
+    margin-bottom: 12px;
+    padding-left: 4px;
+  }
+
+  .d2-scenario-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .d2-scenario {
+    background: var(--gray-50);
+    border-radius: 16px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .d2-scenario-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .d2-scenario-text h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+
+  .d2-scenario-text p {
+    font-size: 12px;
+    color: var(--gray-500);
+  }
+
+  .d2-scenario-arrow {
+    margin-left: auto;
+    color: var(--gray-400);
+    font-size: 16px;
+  }
+
+  /* ===== DIRECTION 3: Dark Immersive ===== */
+  .d3-home {
+    background: var(--gray-950);
+    padding: 48px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d3-greeting {
+    font-size: 14px;
+    color: var(--emerald-400);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .d3-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 24px;
+  }
+
+  .d3-stats-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .d3-stat {
+    flex: 1;
+    background: var(--gray-900);
+    border-radius: 16px;
+    padding: 14px 12px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .d3-stat-value {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+
+  .d3-stat-label {
+    font-size: 10px;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .d3-practice-card {
+    background: linear-gradient(145deg, var(--gray-900), var(--gray-800));
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .d3-practice-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--emerald-500), var(--emerald-400));
+  }
+
+  .d3-practice-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .d3-practice-card p {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 14px;
+  }
+
+  .d3-start-btn {
+    background: var(--emerald-500);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .d3-recent {
+    margin-top: 8px;
+  }
+
+  .d3-recent-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-500);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .d3-recent-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .d3-recent-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .d3-recent-info {
+    flex: 1;
+  }
+
+  .d3-recent-info h4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-200);
+  }
+
+  .d3-recent-info p {
+    font-size: 11px;
+    color: var(--gray-600);
+  }
+
+  /* ===== DIRECTION 4: Playful Coach ===== */
+  .d4-home {
+    background: linear-gradient(180deg, var(--emerald-50) 0%, white 40%);
+    padding: 48px 20px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d4-wave {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+
+  .d4-greeting {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 2px;
+  }
+
+  .d4-motivational {
+    font-size: 14px;
+    color: var(--emerald-600);
+    font-weight: 500;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .d4-streak-card {
+    background: white;
+    border-radius: 20px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid var(--emerald-100);
+  }
+
+  .d4-streak-fire {
+    font-size: 32px;
+  }
+
+  .d4-streak-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gray-900);
+  }
+
+  .d4-streak-info p {
+    font-size: 12px;
+    color: var(--gray-500);
+  }
+
+  .d4-cta {
+    background: var(--emerald-500);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .d4-cta:hover { transform: scale(1.02); }
+
+  .d4-cta-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .d4-cta-text h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .d4-cta-text p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .d4-progress-section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin-bottom: 12px;
+  }
+
+  .d4-progress-bar-container {
+    background: var(--gray-100);
+    border-radius: 8px;
+    height: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .d4-progress-fill {
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--emerald-400), var(--emerald-500));
+  }
+
+  .d4-progress-label {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 16px;
+  }
+
+  .d4-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .d4-topic {
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  /* ===== DIRECTION 5: Dashboard Pro ===== */
+  .d5-home {
+    background: var(--gray-50);
+    padding: 44px 16px 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+  .d5-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .d5-topbar-logo {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--emerald-600);
+  }
+
+  .d5-topbar-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .d5-notification {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    position: relative;
+  }
+
+  .d5-notification::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
+
+  .d5-cards-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .d5-mini-card {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  .d5-mini-card-label {
+    font-size: 10px;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .d5-mini-card-value {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+
+  .d5-mini-card-delta {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  .d5-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .d5-team-list {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  .d5-team-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--gray-100);
+    gap: 8px;
+  }
+
+  .d5-team-row:last-child { border-bottom: none; }
+
+  .d5-team-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-600);
+    flex-shrink: 0;
+  }
+
+  .d5-team-info { flex: 1; }
+  .d5-team-info h4 { font-size: 13px; font-weight: 600; color: var(--gray-900); }
+  .d5-team-info p { font-size: 10px; color: var(--gray-500); }
+
+  .d5-team-status {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  /* ===== DIRECTION 6: Contextual Cards ===== */
+  .d6-home {
+    background: var(--gray-900);
+    padding: 48px 16px 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d6-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .d6-greeting-text {
+    font-size: 14px;
+    color: var(--gray-500);
+  }
+
+  .d6-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .d6-privacy-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(139, 92, 246, 0.15);
+    font-size: 11px;
+    color: var(--purple);
+    font-weight: 600;
+  }
+
+  .d6-context-card {
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .d6-context-card.upcoming {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(16, 185, 129, 0.04));
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .d6-context-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .d6-context-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .d6-context-desc {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 14px;
+  }
+
+  .d6-context-btn {
+    background: var(--emerald-500);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .d6-weekly {
+    background: var(--gray-800);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .d6-weekly h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-400);
+    margin-bottom: 12px;
+  }
+
+  .d6-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 48px;
+  }
+
+  .d6-bar {
+    flex: 1;
+    border-radius: 4px 4px 0 0;
+    min-height: 4px;
+  }
+
+  .d6-day-labels {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .d6-day-labels span {
+    flex: 1;
+    text-align: center;
+    font-size: 9px;
+    color: var(--gray-600);
+  }
+
+  /* Nav bars */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: auto;
+  }
+
+  .bottom-nav.light {
+    border-top-color: var(--gray-200);
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-size: 10px;
+    color: var(--gray-500);
+  }
+
+  .nav-item.active { color: var(--emerald-500); }
+  .nav-item span:first-child { font-size: 18px; }
+
+  /* Web mockup for manager */
+  .web-frame {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: var(--gray-50);
+  }
+
+  .web-titlebar {
+    background: var(--gray-100);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .web-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .web-content {
+    padding: 20px;
+    height: calc(100% - 34px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .web-sidebar-layout {
+    display: flex;
+    height: 100%;
+    gap: 16px;
+  }
+
+  .web-sidebar {
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .web-sidebar-item {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gray-600);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .web-sidebar-item.active {
+    background: var(--emerald-50);
+    color: var(--emerald-700);
+    font-weight: 600;
+  }
+
+  .web-main {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .web-main h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+  }
+
+  .web-main .desc {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 16px;
+  }
+
+  .web-team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .web-team-card {
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid var(--gray-200);
+  }
+
+  .web-team-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .web-team-card-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--emerald-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--emerald-700);
+  }
+
+  .web-team-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+
+  .web-team-card-role {
+    font-size: 10px;
+    color: var(--gray-500);
+  }
+
+  .web-team-card-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--gray-100);
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  .web-team-card-fill {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  .web-team-card-status {
+    font-size: 10px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div>
+    <h1>Cleo & You — Design Directions</h1>
+    <span class="subtitle">6 visual approaches for the learner and manager experience</span>
+  </div>
+  <nav class="nav-tabs">
+    <button class="nav-tab active" onclick="showDirection(1)">1. Minimal Zen</button>
+    <button class="nav-tab" onclick="showDirection(2)">2. Bold Cards</button>
+    <button class="nav-tab" onclick="showDirection(3)">3. Dark Immersive</button>
+    <button class="nav-tab" onclick="showDirection(4)">4. Playful Coach</button>
+    <button class="nav-tab" onclick="showDirection(5)">5. Manager Pro</button>
+    <button class="nav-tab" onclick="showDirection(6)">6. Context-First</button>
+  </nav>
+</header>
+
+<div class="content">
+
+  <!-- DIRECTION 1: Minimal Zen -->
+  <section class="direction-section active" id="dir-1">
+    <div class="direction-header">
+      <span class="direction-tag" style="background: var(--emerald-100); color: var(--emerald-700);">Recommended for learner</span>
+      <h2>Direction 1: Minimal Zen</h2>
+      <p>Inspired by Tesla's focus. Ultra-clean, spacious, white space is a feature. The readiness score dominates the home screen. Everything else is secondary. Calm, confident, and effortless.</p>
+    </div>
+    <div class="mockup-grid">
+      <div class="mockup-card">
+        <div class="mockup-label">Home — Learner</div>
+        <div class="phone-frame">
+          <div class="phone-screen d1-home">
+            <div class="d1-greeting">Hey Jordan</div>
+            <div class="d1-subtitle">3 scenarios ready to practice</div>
+            <div class="d1-readiness">
+              <div class="d1-readiness-label">Your readiness</div>
+              <div class="d1-score-ring"></div>
+              <div style="text-align:center; font-size: 13px; color: var(--gray-500);">Product Knowledge</div>
+            </div>
+            <button class="d1-practice-btn">Practice now</button>
+            <div class="d1-scenario-card">
+              <div class="d1-scenario-avatar">👩‍💼</div>
+              <div class="d1-scenario-info">
+                <h4>Sarah, VP Marketing</h4>
+                <p>Product demo — skeptical buyer</p>
+              </div>
+              <div class="d1-scenario-status" style="background: var(--amber);"></div>
+            </div>
+            <div class="d1-scenario-card">
+              <div class="d1-scenario-avatar">👨‍💻</div>
+              <div class="d1-scenario-info">
+                <h4>Mike, CTO</h4>
+                <p>Technical deep-dive — tough questions</p>
+              </div>
+              <div class="d1-scenario-status" style="background: var(--red);"></div>
+            </div>
+            <div class="bottom-nav light">
+              <div class="nav-item active"><span>🏠</span><span>Home</span></div>
+              <div class="nav-item"><span>📞</span><span>Practice</span></div>
+              <div class="nav-item"><span>📊</span><span>Progress</span></div>
+              <div class="nav-item"><span>⚙️</span><span>Settings</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-card">
+        <div class="mockup-label">Active Simulation</div>
+        <div class="phone-frame">
+          <div class="phone-screen d1-call">
+            <div class="d1-call-pulse">
+              <div class="d1-call-avatar">S</div>
+            </div>
+            <div class="d1-call-name">Sarah Chen</div>
+            <div class="d1-call-role">VP of Marketing, Acme Corp</div>
+            <div class="d1-call-timer">04:32</div>
+            <div class="d1-call-controls">
+              <button class="d1-call-btn mute">🔇</button>
+              <button class="d1-call-btn hint">💡</button>
+              <button class="d1-call-btn end">📞</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-card">
+        <div class="mockup-label">Score Reveal</div>
+        <div class="phone-frame">
+          <div class="phone-screen d1-score">
+            <div class="d1-score-big"><span>86</span></div>
+            <div class="d1-score-label">Great session!</div>
+            <div class="d1-score-desc">You nailed the product positioning</div>
+            <div class="d1-score-items">
+              <div class="d1-score-item">
+                <span>Opening rapport</span>
+                <span style="color: var(--emerald-400);">●  Strong</span>
+              </div>
+              <div class="d1-score-item">
+                <span>Product knowledge</span>
+                <span style="color: var(--emerald-400);">●  Strong</span>
+              </div>
+              <div class="d1-score-item">
+                <span>Objection handling</span>
+                <span style="color: var(--amber);">●  Work on it</span>
+              </div>
+              <div class="d1-score-item">
+                <span>Closing</span>
+                <span style="color: var(--emerald-400);">●  Strong</span>
+              </div>
+            </div>
+            <button class="d1-share-btn">Share with manager ✨</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION 2: Bold Cards -->
+  <section class="direction-section" id="dir-2">
+    <div class="direction-header">
+      <span class="direction-tag" style="background: rgba(59,130,246,0.15); color: var(--blue);">Energetic</span>
+      <h2>Direction 2: Bold Cards</h2>
+      <p>Inspired by modern fintech apps. Large, colorful hero cards with strong calls to action. The primary action (practice) is impossible to miss. Scenarios feel like destinations, not items in a list.</p>
+    </div>
+    <div class="mockup-grid">
+      <div class="mockup-card">
+        <div class="mockup-label">Home — Learner</div>
+        <div class="phone-frame">
+          <div class="phone-screen d2-home">
+            <div class="d2-header">
+              <div class="d2-logo">cleo</div>
+              <div class="d2-avatar-small"></div>
+            </div>
+            <div class="d2-hero-card">
+              <div class="d2-hero-label">Ready to practice?</div>
+              <div class="d2-hero-title">Product Demo Call</div>
+              <div class="d2-hero-subtitle">Sarah is waiting — she's in a skeptical mood today</div>
+              <button class="d2-hero-btn">Start call →</button>
+            </div>
+            <div class="d2-section-label">All scenarios</div>
+            <div class="d2-scenario-list">
+              <div class="d2-scenario">
+                <div class="d2-scenario-icon" style="background: var(--emerald-100);">🎯</div>
+                <div class="d2-scenario-text">
+                  <h4>Cold outreach</h4>
+                  <p>First contact with a new lead</p>
+                </div>
+                <div class="d2-scenario-arrow">›</div>
+              </div>
+              <div class="d2-scenario">
+                <div class="d2-scenario-icon" style="background: rgba(245,158,11,0.15);">🔥</div>
+                <div class="d2-scenario-text">
+                  <h4>Objection handling</h4>
+                  <p>Price, timing, and competitor concerns</p>
+                </div>
+                <div class="d2-scenario-arrow">›</div>
+              </div>
+              <div class="d2-scenario">
+                <div class="d2-scenario-icon" style="background: rgba(139,92,246,0.15);">🤝</div>
+                <div class="d2-scenario-text">
+                  <h4>Conference networking</h4>
+                  <p>Quick pitch at an industry event</p>
+                </div>
+                <div class="d2-scenario-arrow">›</div>
+              </div>
+              <div class="d2-scenario">
+                <div class="d2-scenario-icon" style="background: rgba(59,130,246,0.15);">📋</div>
+                <div class="d2-scenario-text">
+                  <h4>Discovery call</h4>
+                  <p>Understanding prospect needs</p>
+                </div>
+                <div class="d2-scenario-arrow">›</div>
+              </div>
+            </div>
+            <div class="bottom-nav light">
+              <div class="nav-item active"><span>🏠</span><span>Home</span></div>
+              <div class="nav-item"><span>📞</span><span>Practice</span></div>
+              <div class="nav-item"><span>📊</span><span>Progress</span></div>
+              <div class="nav-item"><span>⚙️</span><span>Settings</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION 3: Dark Immersive -->
+  <section class="direction-section" id="dir-3">
+    <div class="direction-header">
+      <span class="direction-tag" style="background: rgba(16,185,129,0.15); color: var(--emerald-400);">Immersive</span>
+      <h2>Direction 3: Dark Immersive</h2>
+      <p>Fully dark theme everywhere — not just simulations. Inspired by gaming UIs and premium audio apps. Stats and metrics feel like performance dashboards. The entire app feels like one continuous immersive experience.</p>
+    </div>
+    <div class="mockup-grid">
+      <div class="mockup-card">
+        <div class="mockup-label">Home — Learner</div>
+        <div class="phone-frame">
+          <div class="phone-screen d3-home">
+            <div class="d3-greeting">Good morning, Jordan</div>
+            <div class="d3-title">Let's level up today</div>
+            <div class="d3-stats-row">
+              <div class="d3-stat">
+                <div class="d3-stat-value" style="color: var(--emerald-400);">7</div>
+                <div class="d3-stat-label">Sessions</div>
+              </div>
+              <div class="d3-stat">
+                <div class="d3-stat-value" style="color: var(--amber);">72%</div>
+                <div class="d3-stat-label">Readiness</div>
+              </div>
+              <div class="d3-stat">
+                <div class="d3-stat-value" style="color: var(--emerald-400);">3</div>
+                <div class="d3-stat-label">Day streak</div>
+              </div>
+            </div>
+            <div class="d3-practice-card">
+              <h3>Continue: Product Demo</h3>
+              <p>Sarah, VP Marketing — you scored yellow last time</p>
+              <button class="d3-start-btn">Resume practice →</button>
+            </div>
+            <div class="d3-practice-card">
+              <h3>New: Conference Pitch</h3>
+              <p>Quick 3-min elevator pitch at industry event</p>
+              <button class="d3-start-btn">Try this →</button>
+            </div>
+            <div class="d3-recent">
+              <div class="d3-recent-label">Recent sessions</div>
+              <div class="d3-recent-item">
+                <div class="d3-recent-dot" style="background: var(--emerald-400);"></div>
+                <div class="d3-recent-info">
+                  <h4>Cold outreach — Mike, CTO</h4>
+                  <p>Yesterday · 6 min · Score: 88</p>
+                </div>
+              </div>
+              <div class="d3-recent-item">
+                <div class="d3-recent-dot" style="background: var(--amber);"></div>
+                <div class="d3-recent-info">
+                  <h4>Product demo — Sarah, VP</h4>
+                  <p>2 days ago · 8 min · Score: 64</p>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-nav">
+              <div class="nav-item active"><span>🏠</span><span>Home</span></div>
+              <div class="nav-item"><span>📞</span><span>Practice</span></div>
+              <div class="nav-item"><span>📊</span><span>Progress</span></div>
+              <div class="nav-item"><span>⚙️</span><span>Settings</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION 4: Playful Coach -->
+  <section class="direction-section" id="dir-4">
+    <div class="direction-header">
+      <span class="direction-tag" style="background: rgba(245,158,11,0.15); color: var(--amber);">Warm & Motivating</span>
+      <h2>Direction 4: Playful Coach</h2>
+      <p>The friendliest direction — motivational language, streak tracking, warm gradients. Feels like a fitness app for your sales skills. Encouragement-first without being childish. Progress is visible and celebrated.</p>
+    </div>
+    <div class="mockup-grid">
+      <div class="mockup-card">
+        <div class="mockup-label">Home — Learner</div>
+        <div class="phone-frame">
+          <div class="phone-screen d4-home">
+            <div class="d4-wave">👋</div>
+            <div class="d4-greeting">Hey Jordan!</div>
+            <div class="d4-motivational">"Every call gets you closer to ready"</div>
+            <div class="d4-streak-card">
+              <div class="d4-streak-fire">🔥</div>
+              <div class="d4-streak-info">
+                <h4>3-day streak!</h4>
+                <p>Keep it going — practice today</p>
+              </div>
+            </div>
+            <div class="d4-cta">
+              <div class="d4-cta-icon">📞</div>
+              <div class="d4-cta-text">
+                <h3>Practice call</h3>
+                <p>Sarah is ready — product demo scenario</p>
+              </div>
+            </div>
+            <div class="d4-progress-section">
+              <h3>Your progress</h3>
+              <div class="d4-progress-bar-container">
+                <div class="d4-progress-fill" style="width: 72%;"></div>
+              </div>
+              <div class="d4-progress-label">72% ready — 3 topics to green</div>
+              <div class="d4-topics">
+                <div class="d4-topic" style="background: var(--emerald-100); color: var(--emerald-700);">Product knowledge ✓</div>
+                <div class="d4-topic" style="background: var(--emerald-100); color: var(--emerald-700);">Pricing ✓</div>
+                <div class="d4-topic" style="background: rgba(245,158,11,0.15); color: var(--amber);">Objections</div>
+                <div class="d4-topic" style="background: rgba(239,68,68,0.1); color: var(--red);">Competitors</div>
+                <div class="d4-topic" style="background: rgba(239,68,68,0.1); color: var(--red);">Closing</div>
+              </div>
+            </div>
+            <div class="bottom-nav light">
+              <div class="nav-item active"><span>🏠</span><span>Home</span></div>
+              <div class="nav-item"><span>📞</span><span>Practice</span></div>
+              <div class="nav-item"><span>📊</span><span>Progress</span></div>
+              <div class="nav-item"><span>⚙️</span><span>Settings</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION 5: Manager Dashboard -->
+  <section class="direction-section" id="dir-5">
+    <div class="direction-header">
+      <span class="direction-tag" style="background: rgba(59,130,246,0.15); color: var(--blue);">Manager view</span>
+      <h2>Direction 5: Manager Dashboard</h2>
+      <p>Linear-inspired density for the manager/web experience. Information-rich without clutter. Team readiness at a glance with aggregate signals — no surveillance. Clean tables, clear status indicators, fast keyboard navigation.</p>
+    </div>
+    <div class="mockup-grid">
+      <div class="mockup-card" style="grid-column: span 2;">
+        <div class="mockup-label">Manager Dashboard — Web</div>
+        <div class="web-frame">
+          <div class="web-titlebar">
+            <div class="web-dot" style="background: #FF5F57;"></div>
+            <div class="web-dot" style="background: #FFBD2E;"></div>
+            <div class="web-dot" style="background: #28CA41;"></div>
+          </div>
+          <div class="web-content">
+            <div class="web-sidebar-layout">
+              <div class="web-sidebar">
+                <div style="font-size: 16px; font-weight: 800; color: var(--emerald-600); padding: 4px 12px 16px; letter-spacing: -0.5px;">cleo</div>
+                <div class="web-sidebar-item active">📊 Team readiness</div>
+                <div class="web-sidebar-item">📚 Content library</div>
+                <div class="web-sidebar-item">📤 Upload content</div>
+                <div class="web-sidebar-item">⚙️ Settings</div>
+              </div>
+              <div class="web-main">
+                <h2>Team readiness</h2>
+                <div class="desc">Aggregate view — only shared results are visible</div>
+                <div class="web-team-grid">
+                  <div class="web-team-card">
+                    <div class="web-team-card-header">
+                      <div class="web-team-card-avatar">JR</div>
+                      <div>
+                        <div class="web-team-card-name">Jordan Rivera</div>
+                        <div class="web-team-card-role">Sales Rep · 3 weeks</div>
+                      </div>
+                    </div>
+                    <div class="web-team-card-bar"><div class="web-team-card-fill" style="width: 85%; background: var(--emerald-500);"></div></div>
+                    <div class="web-team-card-status" style="color: var(--emerald-600);">● Ready — shared 2 sessions</div>
+                  </div>
+                  <div class="web-team-card">
+                    <div class="web-team-card-header">
+                      <div class="web-team-card-avatar">AT</div>
+                      <div>
+                        <div class="web-team-card-name">Alex Thompson</div>
+                        <div class="web-team-card-role">Sales Rep · 1 week</div>
+                      </div>
+                    </div>
+                    <div class="web-team-card-bar"><div class="web-team-card-fill" style="width: 55%; background: var(--amber);"></div></div>
+                    <div class="web-team-card-status" style="color: var(--amber);">● Progressing — shared 1 session</div>
+                  </div>
+                  <div class="web-team-card">
+                    <div class="web-team-card-header">
+                      <div class="web-team-card-avatar">SK</div>
+                      <div>
+                        <div class="web-team-card-name">Sam Kim</div>
+                        <div class="web-team-card-role">Sales Rep · 2 days</div>
+                      </div>
+                    </div>
+                    <div class="web-team-card-bar"><div class="web-team-card-fill" style="width: 20%; background: var(--red);"></div></div>
+                    <div class="web-team-card-status" style="color: var(--red);">● Getting started — no shares yet</div>
+                  </div>
+                  <div class="web-team-card">
+                    <div class="web-team-card-header">
+                      <div class="web-team-card-avatar">MP</div>
+                      <div>
+                        <div class="web-team-card-name">Maria Patel</div>
+                        <div class="web-team-card-role">Sales Rep · 2 months</div>
+                      </div>
+                    </div>
+                    <div class="web-team-card-bar"><div class="web-team-card-fill" style="width: 92%; background: var(--emerald-500);"></div></div>
+                    <div class="web-team-card-status" style="color: var(--emerald-600);">● Ready — shared 5 sessions</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mockup-card">
+        <div class="mockup-label">Manager — Mobile App</div>
+        <div class="phone-frame">
+          <div class="phone-screen d5-home">
+            <div class="d5-topbar">
+              <div class="d5-topbar-logo">cleo</div>
+              <div class="d5-topbar-right">
+                <div class="d5-notification">🔔</div>
+              </div>
+            </div>
+            <div class="d5-cards-row">
+              <div class="d5-mini-card">
+                <div class="d5-mini-card-label">Team ready</div>
+                <div class="d5-mini-card-value" style="color: var(--emerald-600);">3/5</div>
+                <div class="d5-mini-card-delta" style="color: var(--emerald-500);">↑ 1 this week</div>
+              </div>
+              <div class="d5-mini-card">
+                <div class="d5-mini-card-label">Avg. score</div>
+                <div class="d5-mini-card-value" style="color: var(--gray-900);">74%</div>
+                <div class="d5-mini-card-delta" style="color: var(--emerald-500);">↑ 12% vs last week</div>
+              </div>
+            </div>
+            <div class="d5-section-title">Team status</div>
+            <div class="d5-team-list">
+              <div class="d5-team-row">
+                <div class="d5-team-avatar">JR</div>
+                <div class="d5-team-info">
+                  <h4>Jordan Rivera</h4>
+                  <p>Shared 2 sessions</p>
+                </div>
+                <div class="d5-team-status" style="background: var(--emerald-100); color: var(--emerald-700);">Ready</div>
+              </div>
+              <div class="d5-team-row">
+                <div class="d5-team-avatar">AT</div>
+                <div class="d5-team-info">
+                  <h4>Alex Thompson</h4>
+                  <p>Shared 1 session</p>
+                </div>
+                <div class="d5-team-status" style="background: rgba(245,158,11,0.15); color: var(--amber);">Progressing</div>
+              </div>
+              <div class="d5-team-row">
+                <div class="d5-team-avatar">SK</div>
+                <div class="d5-team-info">
+                  <h4>Sam Kim</h4>
+                  <p>No shares yet</p>
+                </div>
+                <div class="d5-team-status" style="background: rgba(239,68,68,0.1); color: var(--red);">New</div>
+              </div>
+              <div class="d5-team-row">
+                <div class="d5-team-avatar">MP</div>
+                <div class="d5-team-info">
+                  <h4>Maria Patel</h4>
+                  <p>Shared 5 sessions</p>
+                </div>
+                <div class="d5-team-status" style="background: var(--emerald-100); color: var(--emerald-700);">Ready</div>
+              </div>
+            </div>
+            <div class="d5-section-title">Content library</div>
+            <div class="d5-team-list">
+              <div class="d5-team-row">
+                <div class="d5-team-avatar" style="background: var(--emerald-100); color: var(--emerald-700);">📄</div>
+                <div class="d5-team-info">
+                  <h4>Sales Playbook 2026</h4>
+                  <p>4 scenarios generated</p>
+                </div>
+              </div>
+              <div class="d5-team-row">
+                <div class="d5-team-avatar" style="background: rgba(59,130,246,0.1); color: var(--blue);">📄</div>
+                <div class="d5-team-info">
+                  <h4>Competitive Battle Cards</h4>
+                  <p>2 scenarios generated</p>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-nav light">
+              <div class="nav-item active"><span>📊</span><span>Team</span></div>
+              <div class="nav-item"><span>📚</span><span>Content</span></div>
+              <div class="nav-item"><span>📤</span><span>Upload</span></div>
+              <div class="nav-item"><span>⚙️</span><span>Settings</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECTION 6: Context-First -->
+  <section class="direction-section" id="dir-6">
+    <div class="direction-header">
+      <span class="direction-tag" style="background: rgba(139,92,246,0.15); color: var(--purple);">Contextual & Private</span>
+      <h2>Direction 6: Context-First</h2>
+      <p>The most contextually aware direction. The app knows what you need to practice based on upcoming events (conferences, calls, launches). Privacy is visually prominent — the purple shield badge is always visible. Weekly activity gives a personal rhythm without surveillance.</p>
+    </div>
+    <div class="mockup-grid">
+      <div class="mockup-card">
+        <div class="mockup-label">Home — Learner</div>
+        <div class="phone-frame">
+          <div class="phone-screen d6-home">
+            <div class="d6-top">
+              <div>
+                <div class="d6-greeting-text">Good morning</div>
+                <div class="d6-name">Jordan</div>
+              </div>
+              <div class="d6-privacy-badge">🔒 Private</div>
+            </div>
+            <div class="d6-context-card upcoming">
+              <div class="d6-context-label" style="color: var(--emerald-400);">Upcoming in 2 days</div>
+              <div class="d6-context-title">SaaS Connect Conference</div>
+              <div class="d6-context-desc">Practice your elevator pitch and product demo for networking</div>
+              <button class="d6-context-btn">Practice for this →</button>
+            </div>
+            <div class="d6-context-card" style="background: var(--gray-800); border: 1px solid rgba(255,255,255,0.06);">
+              <div class="d6-context-label" style="color: var(--amber);">Suggested</div>
+              <div class="d6-context-title">Objection handling</div>
+              <div class="d6-context-desc">You scored yellow last time — one more session to green</div>
+              <button class="d6-context-btn" style="background: var(--gray-700);">Continue →</button>
+            </div>
+            <div class="d6-weekly">
+              <h3>This week</h3>
+              <div class="d6-bars">
+                <div class="d6-bar" style="height: 70%; background: var(--emerald-500);"></div>
+                <div class="d6-bar" style="height: 40%; background: var(--emerald-500);"></div>
+                <div class="d6-bar" style="height: 90%; background: var(--emerald-400);"></div>
+                <div class="d6-bar" style="height: 30%; background: var(--emerald-500);"></div>
+                <div class="d6-bar" style="height: 0%; background: var(--gray-700);"></div>
+                <div class="d6-bar" style="height: 0%; background: var(--gray-700);"></div>
+                <div class="d6-bar" style="height: 0%; background: var(--gray-700);"></div>
+              </div>
+              <div class="d6-day-labels">
+                <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+              </div>
+            </div>
+            <div class="bottom-nav">
+              <div class="nav-item active"><span>🏠</span><span>Home</span></div>
+              <div class="nav-item"><span>📞</span><span>Practice</span></div>
+              <div class="nav-item"><span>📊</span><span>Progress</span></div>
+              <div class="nav-item"><span>🔒</span><span>Privacy</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+function showDirection(n) {
+  document.querySelectorAll('.direction-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('dir-' + n).classList.add('active');
+  document.querySelectorAll('.nav-tab')[n - 1].classList.add('active');
+}
+</script>
+
+</body>
+</html>
